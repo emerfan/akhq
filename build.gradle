@@ -1,12 +1,12 @@
 plugins {
     // micronaut
     id "com.github.johnrengelman.shadow" version "8.1.1"
-    id "io.micronaut.application" version "4.4.0"
+    id "io.micronaut.application" version "4.4.2"
 
     // akhq
     id "com.gorylenko.gradle-git-properties" version "2.4.2"
     id 'com.adarshr.test-logger' version '4.0.0'
-    id 'org.gradle.test-retry' version '1.5.9'
+    id 'org.gradle.test-retry' version '1.5.10'
     id 'com.github.psxpaul.execfork' version '0.2.2'
     id "com.github.ben-manes.versions" version "0.51.0"
     id "com.github.davidmc24.gradle.plugin.avro" version "1.9.1"
@@ -130,16 +130,16 @@ dependencies {
 
     // utils
     implementation group: 'org.codehaus.httpcache4j.uribuilder', name: 'uribuilder', version: '2.0.0'
-    implementation 'com.google.guava:guava:33.2.1-jre'
+    implementation 'com.google.guava:guava:33.3.0-jre'
     implementation 'com.google.code.gson:gson:2.11.0'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 
     // avro
-    implementation 'org.apache.avro:avro:1.11.3'
+    implementation 'org.apache.avro:avro:1.12.0'
 
     // jackson-module-scala
-    implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-scala_2.13', version: '2.17.1'
+    implementation group: 'com.fasterxml.jackson.module', name: 'jackson-module-scala_2.13', version: '2.17.2'
 
     // protobuf
     implementation group: "com.google.protobuf", name: "protobuf-java", version: '4.27.0'
@@ -157,20 +157,20 @@ dependencies {
     // Password hashing
     implementation group: "org.mindrot", name: "jbcrypt", version: "0.4"
 
-    implementation group: 'org.apache.groovy', name: 'groovy-all', version: '4.0.21'
+    implementation group: 'org.apache.groovy', name: 'groovy-all', version: '4.0.22'
     // api
 
     // client
     implementation project(":client")
 
     //AWS MSK IAM Auth
-    implementation group: 'software.amazon.msk', name: 'aws-msk-iam-auth', version: '2.1.1'
+    implementation group: 'software.amazon.msk', name: 'aws-msk-iam-auth', version: '2.2.0'
 
     // AWS Glue serde
     implementation ("software.amazon.glue:schema-registry-serde:1.1.20")
 
 
-    implementation group: 'io.projectreactor', name: 'reactor-core', version: '3.6.7'
+    implementation group: 'io.projectreactor', name: 'reactor-core', version: '3.6.9'
 
     implementation 'io.jsonwebtoken:jjwt-impl:0.12.6'
 }
@@ -231,14 +231,14 @@ dependencies {
     testImplementation group: 'org.apache.kafka', name: 'kafka-streams', version: kafkaVersion
     testImplementation group: "io.confluent", name: "kafka-streams-avro-serde", version: confluentVersion
     testImplementation "io.confluent:kafka-connect-avro-converter:" + confluentVersion
-    testImplementation group: 'commons-codec', name: 'commons-codec', version: '1.17.0'
-    testImplementation 'org.hamcrest:hamcrest:2.2'
-    testImplementation 'org.hamcrest:hamcrest-library:2.2'
+    testImplementation group: 'commons-codec', name: 'commons-codec', version: '1.17.1'
+    testImplementation 'org.hamcrest:hamcrest:3.0'
+    testImplementation 'org.hamcrest:hamcrest-library:3.0'
     testImplementation 'org.mockito:mockito-junit-jupiter'
     testImplementation 'com.salesforce.kafka.test:kafka-junit5:3.2.5'
     testImplementation 'org.apache.curator:curator-test:5.7.0'
 
-    testImplementation 'org.awaitility:awaitility:4.2.1'
+    testImplementation 'org.awaitility:awaitility:4.2.2'
 }
 
 testlogger {

@@ -54,7 +54,11 @@ public class AvroSerializer {
         .optionalStart()
         .appendFraction(ChronoField.NANO_OF_SECOND, 1, 9, true)
         .optionalEnd()
+        .optionalStart()
+        .appendPattern("XXX")
+        .optionalEnd()
         .toFormatter();
+
     protected static final DateTimeFormatter DATETIME_FORMAT = new DateTimeFormatterBuilder()
             .append(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
             .optionalStart()
